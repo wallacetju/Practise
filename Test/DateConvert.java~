@@ -1,0 +1,29 @@
+package Test;
+
+public class DateConvert
+{
+  /***
+    *        The main purpose for this function is 
+    * to do complex conversion between storage value and 
+    * Double value which is used in Graph drawing.
+    *     What this function is to do is to calculate the 
+    * double value difference between a set time and the 
+    * stored time. Integer part stands for the days, and
+    * decimal part stands for hour&mins.
+    * 
+    * 
+    **/
+  public Double convertToDouble (Date date)
+  {
+    Double doubleDate = date.getTime()/(3600*1000*24) + date.getTime()%(3600*1000*24)/((3600*1000*24));
+    return doubleDate;    
+  }
+  
+  public static void main(String[] args)
+  {
+    System.out.println(convertToDouble(new Date));
+    
+  }
+  
+   
+}

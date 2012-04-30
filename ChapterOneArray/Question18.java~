@@ -1,0 +1,9 @@
+package Array;
+
+public class Question18
+{
+
+  public void isSubstring()
+  {
+  }
+}

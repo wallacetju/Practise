@@ -1,0 +1,8 @@
+package ChapterTwo;
+public class Question25
+{
+  private ArrayList<Node> markList;
+  private LinkedList list;
+  
+  
+}

@@ -1,0 +1,51 @@
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class TestConnection
+{
+  public void post()
+  { 
+    try {
+      // URL    
+      URL url = new URL("http://fangfangandshuai.com/testConnection.php");
+      
+      // HttpURLConnection
+      HttpURLConnection httpconn = (HttpURLConnection) url.openConnection();
+      
+      if (httpconn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+        
+        System.out.println("Connection Done");
+        // InputStreamReader
+        InputStreamReader isr = new InputStreamReader(httpconn.getInputStream(), "utf-8");
+        int i;
+        String content = httpconn.getResponseCode()+" ";                // read
+        
+        while ((i = isr.read()) != -1) {
+          content = content + (char) i;
+        }
+        isr.close();
+        
+        //??TextView 
+        System.out.println(content);
+        
+      }    
+      //disconnect
+      
+      httpconn.disconnect();
+      
+    } catch (Exception e) {
+      System.out.println("Wrong with connection! ");
+      
+    }
+        
+  }
+  
+  public static void main(String [] args)
+  {
+    TestConnection testConnection = new TestConnection();
+    testConnection.post();
+  }
+  
+  
+}

@@ -1,0 +1,9 @@
+package Arrays;
+public class Question13
+{
+  private char[] data;
+  public void removeDuplicate()
+  {
+    
+  }
+}

@@ -1,0 +1,23 @@
+package Question24;
+import LinkedList.*;
+public class Question24
+{
+  private LinkedList numOne;
+  private LinkedList numTwo;
+  
+  public Question24(int[] one, int[] two)
+  {
+    numOne = new LinkedList(one[0]);
+    numTwo = new LinkedList(two[0]);
+    for(int i=1; i<one.length; i++)
+      this.numOne.insert(i);
+    for(int i=1; i<two.length; i++)
+      this.numTwo.insert(i);
+  }
+  
+  public  sum()
+  {
+    
+  }
+  
+}
